@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css" />
+
+	<link rel="stylesheet" href="jquerymobile/tema2.min.css" />
+	<link rel="stylesheet" href="jquerymobile/jquery.mobile.icons.min.css">
+    <script src="jquerymobile/jquery-1.11.1.min.js"></script>
+    <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+    <title>JIK</title>
+</head>
+<body>
+    
+     <div data-role="page" id="inicio" data-theme="c">
+         <div data-role="header">
+           <h1>Bienvenido a JIK</h1><br><hr>
+           <h3>Prodras armar la hamburguesa que desees</h3><br>
+         </div>
+         <div style="background-color: rgba(248, 114, 4, 0.911) ;" role="main" class="ui-content">
+           <h2><center>Bienvenido</center></h2>
+           <p>
+            <center>Bienvenido a JIK !!!            Cansado de comer las hamburguesas mas comunes del mundo????<br>
+            Pues entra A JIK!!!           y ARMA tu propia hamburguesa y nosotros te la enviaremos a que esperas para pedirla <br> pasate por el menu para ver las recomendaciones y presios  </center>
+        </p>
+        <center><img src="images/JIK.JPEG" alt="" width="70%"></center>
+         </div>
+         <div data-role="footer" data-position="fixed">
+              <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="grid" class="ui-btn-active">Inicio</a></li>
+                    <li><a href="#productos" data-icon="star" >Menu</a></li>
+                    <li><a href="carrito.php" data-icon="gear" >carrito</a></li>
+                    
+
+                </ul>
+              </div>
+         </div>
+     </div>
+     <div data-role="page" id="productos" data-theme="c">
+        <div data-role="header">
+            <h1>Menu</h1>
+        </div>
+        
+        <div style="background-color: rgba(231, 73, 10, 0.959);" role="main" class="ui-content">
+         <h2>Menu </h2>
+         <ul data-role="listview" data-inset="true">
+             <li><a href="#pedido">
+           <img src="images/hamburguesa1.JPEG" alt="">
+           <h2>Sencilla y papas</h2>
+           <p>$121.00 MX/$6.05 USD</p></a>
+       </li>
+            <li><a href="#">
+                <img src="images/hamburguesa2.JPEG" alt="">
+                <h2>Sencilla</h2>
+                <p>$90.00 MX/$4.50 USD</p>
+            </a></li>
+
+
+         </ul>
+       </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#inicio" data-icon="grid" class="ui-btn-active">Inicio</a></li>
+                        <li><a href="#productos" data-icon="star" >Menu</a></li>
+                        <li><a href="carrito.php" data-icon="gear" >carrito</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+         </div>
+
+     </div>
+     <!-- <div data-role="page" id="carrito" data-theme="b">
+         <div data-role="header">
+             <h1>Carrito</h1>
+         </div>
+         
+         <div style="background-color: rgba(231, 73, 10, 0.959);" role="main" class="ui-content">
+          <h2>Carrito de </h2>
+          <ul data-role="listview" data-inset="true">
+              <li><a href="#">
+            <img src="images/hamburguesa1.JPEG" alt="">
+            <h2>Sencilla y papas</h2>
+            <p>$121.00 MX/$6.05 USD/p></a>
+        </li>
+             <li><a href="#">
+                 <img src="images/hamburguesa2.JPEG" alt="">
+                 <h2>Sencilla</h2>
+                 <p>$90.00 MX/$4.50 USD</p>
+             </a></li>
+
+
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio" data-icon="grid" class="ui-btn-active">Inicio</a></li>
+                    <li><a href="#productos" data-icon="star" >Menu</a></li>
+                    <li><a href="#carrito" data-icon="gear" >Carrito</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+     </div> -->
+     <div data-role="page" id="pedido" data-theme="b">
+        <div data-role="header">
+            <h1>pedido</h1>
+        </div>
+        
+        <div style="background-color: rgba(231, 73, 10, 0.959);" role="main" class="ui-content">
+         <h2>PEDIDO DE:</h2>
+         <div role="main" class="ui-content" align="center">
+			<h2 style="text-align: center; color: rgb(217, 255, 0)">Comprar hamburguesa</h2><hr>
+			<h2 style="text-align: center;">Sencilla y Papas</h2>
+			$121.00 MX/$6.05 USD
+
+			<img src="images/hamburguesa1.JPEG" width="80%" height="75%" style="border: 10px solid; color: rgba(225, 0, 255, 0.842);">
+			<div class="container">
+			<div class="row">
+			<div class="col">
+				<h3>Registro de datos para compra</h3><hr>
+				<form action="guardar_registro.php" method="POST" class="formulario">
+					<div>
+						<input type="radio" name="nombre_hamburguesa" value="hamburguesa y papas" checked hidden>
+                        <input type="radio" name="costo_de_articulo" value="$121.00" checked hidden>
+					</div>
+
+					<div class="form-group col-8">
+						<label for="comentario">Comentario:</label>
+						<input type="text" class="form-control" name="comentario" placeholder="Teclea un comentario respecto a tu pedido">
+					</div>
+					<div class="form-group col-8">
+						<label for="metodo_de_pago">Metodo de Pago:</label>
+						<input type="text" class="form-control" name="metodo_de_pago" placeholder="Teclea tu metodo de Pago"></input>
+					</div>
+					<div class="form-group col-7">
+						<label for="extras">Extras que desee agregar:</label>
+						<input type="text" class="form-control" name="extras" placeholder="Teclea tu numero de tarjeta">
+					</div>
+				 	<input type="submit" value="Guardar" class="btn btn-primary" align="center"><br>
+					<a href="#productos" class="btn btn-danger">Volver</a>
+					
+				</form>
+			</div>
+			</div>
+		</div>
+
+
+	
+         
+       <div data-role="footer" data-position="fixed">
+           <div data-role="navbar">
+               <ul>
+                   <li><a href="#inicio" data-icon="grid" class="ui-btn-active">Inicio</a></li>
+                   <li><a href="#productos" data-icon="star" >Menu</a></li>
+                   <li><a href="carrito.php" data-icon="gear" >carrito</a></li>
+                   
+               </ul>
+           </div>
+       </div>
+    </div>
+</body>
+</html>
